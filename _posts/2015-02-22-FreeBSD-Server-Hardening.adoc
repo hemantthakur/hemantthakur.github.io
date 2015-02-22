@@ -65,7 +65,7 @@ By default, FreeBSD prevents root from logging  via ssh, but it gives  access to
 
 The basic rule of the server security is “Restric the read/write and execution of certain files”. Update restricitions of some files. Hit these commands:
 
-  	# chmod o= /etc/sysctl.conf
+	# chmod o= /etc/sysctl.conf
     # chmod o= /etc/ttys
     # chmod o= /etc/inetd.conf	
     # chmod o= /etc/login.*	
