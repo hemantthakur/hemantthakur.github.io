@@ -85,10 +85,8 @@ The basic rule of the server security is “Restric the read/write and execution
 		
 Attackers tend to clear out all log files when they are finished with the server attack. So change the log file permission so that later you can check what was done.
 
-	# chmod o= /var/log
-    
-	# chflags sappnd /var/log
-    
+	# chmod o= /var/log    
+	# chflags sappnd /var/log    
 	# chflags sappnd /var/log/*
     
 by applying these changes, logs can no longer be rotated.
@@ -98,14 +96,10 @@ by applying these changes, logs can no longer be rotated.
 By default, FreeBSD uses md5 for password hashing and encryption. But blowfish is much better and secure for passwords.
 Open /etc/login.conf and make some chages:
 
-	> change the password format in the default class to blf.
-    
-	> Use some password policy like minimum password length and mix upper and lower case.
-    
-	> Policy to change the password after some days.
-    
-	> Automatically logout the user if they are idle for specific time.
-    
+	> change the password format in the default class to blf.    
+	> Use some password policy like minimum password length and mix upper and lower case.    
+	> Policy to change the password after some days.    
+	> Automatically logout the user if they are idle for specific time.    
 	> Prevent global access by setting the default umask.
     
 
