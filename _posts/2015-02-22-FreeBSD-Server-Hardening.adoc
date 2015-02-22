@@ -6,19 +6,20 @@ After Installing clean FreeBSD Server, it is important to harden the server to e
 In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to disfigurement. Similarly, Hardened servers are more resistant to security issue than the non-hardened servers.
 Nowadays everything is online and there are a lot of attacks on servers, so server hardening is an absolute must.
 
-=== Requirements:
+==== Requirements:
 
-1.  Clean FreeBSD Server
-2.  SSH client .
+1.  Clean FreeBSD Server.
+2.  SSH client.
 3.  Text editor (I prefer vi).
 
-Hardening
+==== Hardening
 
-Disable Local root Access
+===== Disable Local root Access
 
-The first rule to secure the server is, never treat the root account as a regular user.  Always log as a   normal user and su to root only when needed. To prevent Root from directly logging onto your system. 
+The first rule to secure the server is, never treat the root account as a regular user.  Always log as a   normal user and su to root only when needed. To prevent Root from directly logging onto your system.
 Open “/etc/ttys”  and change every occurence of “secure” to “insecure”.
-													/etc/ttys file before modification					
+
+/etc/ttys file before modification					
 				 
 
 
