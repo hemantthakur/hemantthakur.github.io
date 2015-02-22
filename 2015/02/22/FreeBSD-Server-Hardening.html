@@ -23,7 +23,7 @@
     <meta property="og:description" content="After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security. In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to..." />
     <meta property="og:url" content="http://hemantthakur.github.io/2015/02/22/FreeBSD-Server-Hardening.html" />
     <meta property="article:published_time" content="2015-02-21T18:30:00.000Z" />
-    <meta property="article:modified_time" content="2015-02-22T15:19:08.100Z" />
+    <meta property="article:modified_time" content="2015-02-22T17:31:01.369Z" />
     <meta property="article:tag" content="FreeBSD Server Hardening" />
     <meta property="article:tag" content="server hardening" />
     
@@ -47,7 +47,7 @@
     "headline": "FreeBSD Server Hardening",
     "url": "http://hemantthakur.github.io/2015/02/22/FreeBSD-Server-Hardening.html",
     "datePublished": "2015-02-21T18:30:00.000Z",
-    "dateModified": "2015-02-22T15:19:08.100Z",
+    "dateModified": "2015-02-22T17:31:01.369Z",
     "keywords": "FreeBSD Server Hardening,  server hardening",
     "description": "After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security. In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to..."
 }
@@ -114,7 +114,7 @@ Nowadays everything is online and there are a lot of attacks on servers, so serv
 Open “/etc/ttys”  and change every occurence of “secure” to “insecure”.</p>
 </div>
 <div class="paragraph">
-<p><img src="https://github.com/hemantthakur/hemantthakur.github.io/tree/master/images/ttybefore.png" alt="Before Modification" title="Before Modification" /></p>
+<p>image::https://github.com/hemantthakur/hemantthakur.github.io/tree/master/images/ttybefore.png</p>
 </div>
 <div class="paragraph">
 <p>/etc/ttys file screenshot before modification</p>
@@ -122,77 +122,181 @@ Open “/etc/ttys”  and change every occurence of “secure” to “insecure�
 <div class="paragraph">
 <p>/etc/ttys file after modification</p>
 </div>
-<div class="paragraph">
-<p>Filesystem Structure:
-   when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.</p>
 </div>
+<div class="sect4">
+<h5 id="_filesystem_structure">Filesystem Structure:</h5>
+<div class="literalblock">
+<div class="content">
+<pre>when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.</pre>
 </div>
-</div>
-<h1 id="_mv_var_tmp_tmp" class="sect0">mv /var/tmp/* /tmp/</h1>
-
-<h1 id="_rm_rf_var_tmp" class="sect0">rm -rf /var/tmp</h1>
-
-<h1 id="_ln_s_tmp_var_tmp" class="sect0">ln -s /tmp /var/tmp</h1>
-<div class="paragraph">
-<p>SSH Logins</p>
-</div>
-<div class="paragraph">
-<p>By default, FreeBSD prevents root from logging  via ssh, but it gives  access to anyone  with a valid user account.
-Ensure only sshv2 is used for connection purpose. SSHV1 does not provide all the security.
-Open /etc/ssh/sshd_config . uncomment the line “Protocol 2” and also uncomment all the hostkeys for protocol version 2.
-Ensure server is not running X11. Turn off forwarding for X11.
-Open /etc/ssh/sshd_config file search for “X11Forwarding yes”  by default it is commented and default value is “yes”, uncomment the line and change value  to “no”
-Disable OS Display.</p>
-</div>
-<div class="paragraph">
-<p>Restriction on user Access:</p>
-</div>
-<div class="paragraph">
-<p>The basic rule of the server security is “Restric the read/write and execution of certain files”. Update restricitions of some files. Hit these commands:
-  	# chmod o= /etc/sysctl.conf
-# chmod o= /etc/ttys
-# chmod o= /etc/inetd.conf
-# chmod o= /etc/login.*
-# chmod o= /etc/fstab
-# chmod o= /etc/rc.conf
-# chmod o= /etc/ftpusers
-# chmod o= /etc/group
-# chmod o= /etc/host*
-# chmod o= /etc/inetd.conf
-#chmod o= /usr/bin/users
-#chmod o= /usr/bin/w
-#chmod o= /usr/bin/who
-#chmod o= /usr/bin/lastcomm
-#chmod o= /usr/bin/lastlogin
-#chmod o= /usr/bin/last</p>
-</div>
-<div class="paragraph">
-<p>Attackers tend to clear out all log files when they are finished with the server attack. So change the log file permission so that later you can check what was done.
-# chmod o= /var/log
-# chflags sappnd /var/log
-# chflags sappnd /var/log/*
-by applying these changes, logs can no longer be rotated.</p>
-</div>
-<div class="paragraph">
-<p>Password Rules</p>
-</div>
-<div class="paragraph">
-<p>By default, FreeBSD uses md5 for password hashing and encryption. But blowfish is much better and secure for passwords.
-Open /etc/login.conf and make some chages:
-change the password format in the default class to blf.
-Use some password policy like minimum password length and mix upper and lower case.
-Policy to change the password after some days.
-Automatically logout the user if they are idle for specific time.
-Prevent global access by setting the default umask.</p>
-</div>
-<div class="paragraph">
-<p>Update the login database:
-	# cap_mkdb /etc/login.conf</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Here is my /etc/login.conf file snapshot.</pre>
+<pre># mv /var/tmp/* /tmp/
+# rm -rf /var/tmp
+# ln -s /tmp /var/tmp</pre>
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ssh_logins">SSH Logins</h5>
+<div class="paragraph">
+<p>By default, FreeBSD prevents root from logging  via ssh, but it gives  access to anyone  with a valid user account.
+	&gt; Ensure only sshv2 is used for connection purpose. SSHV1 does not provide all the security.
+			&gt;&gt; Open /etc/ssh/sshd_config . uncomment the line “Protocol 2” and also uncomment all the hostkeys for protocol version 2.
+	&gt; Ensure server is not running X11. Turn off forwarding for X11.
+			&gt;&gt; Open /etc/ssh/sshd_config file search for “X11Forwarding yes”  by default it is commented and default value is “yes”, uncomment the line and change value  to “no”
+	&gt; Disable OS Display.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_restriction_on_user_access">Restriction on user Access:</h5>
+<div class="paragraph">
+<p>The basic rule of the server security is “Restric the read/write and execution of certain files”. Update restricitions of some files. Hit these commands:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/sysctl.conf</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/ttys</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/inetd.conf</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/login.*</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/fstab</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/rc.conf</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/ftpusers</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/group</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/host*</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /etc/inetd.conf</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /usr/bin/users</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /usr/bin/w</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /usr/bin/who</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /usr/bin/lastcomm</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /usr/bin/lastlogin</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /usr/bin/last</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attackers tend to clear out all log files when they are finished with the server attack. So change the log file permission so that later you can check what was done.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chmod o= /var/log</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chflags sappnd /var/log</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># chflags sappnd /var/log/*</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>by applying these changes, logs can no longer be rotated.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_password_rules">Password Rules</h5>
+<div class="paragraph">
+<p>By default, FreeBSD uses md5 for password hashing and encryption. But blowfish is much better and secure for passwords.
+Open /etc/login.conf and make some chages:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; change the password format in the default class to blf.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; Use some password policy like minimum password length and mix upper and lower case.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; Policy to change the password after some days.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; Automatically logout the user if they are idle for specific time.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; Prevent global access by setting the default umask.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Update the login database:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># cap_mkdb /etc/login.conf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is my /etc/login.conf file snapshot.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -201,12 +305,14 @@ Prevent global access by setting the default umask.</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_disable_some_services">Disable Some services:</h5>
 <div class="paragraph">
-<p>Disable Some services:</p>
+<p>Disable sendmail as it insecure MTA.</p>
 </div>
 <div class="paragraph">
-<p>Disable sendmail as it insecure MTA.
-Open /etc/rc.conf  and add line sendmail_enable="NONE".
+<p>Open /etc/rc.conf  and add line sendmail_enable="NONE".
  The default kernel level is -1, means not much secure. Use level 2 or 3, 3 is the more secure level
 Open /etc/rc.conf  and add line kern_securelevel_enable="YES" and kern_securelevel="3" .
 inetd, or the network daemon dispatcher, is insecure so we want to make sure it is disabled.
@@ -228,6 +334,8 @@ net.inet.ip.random_id=1     # generate a random ID for the IP packets . This wil
 </div>
 <div class="paragraph">
 <p>These are the server hardening steps to secure your production server.</p>
+</div>
+</div>
 </div>
         </section>
 
