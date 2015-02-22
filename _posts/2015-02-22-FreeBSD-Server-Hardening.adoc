@@ -51,11 +51,11 @@ when we install the default FreeBSD server then the “tmp” directory is at tw
 
 
 By default, FreeBSD prevents root from logging  via ssh, but it gives  access to anyone  with a valid user account.
-	> Ensure only sshv2 is used for connection purpose. SSHV1 does not provide all the security.
-			>> Open /etc/ssh/sshd_config . uncomment the line “Protocol 2” and also uncomment all the hostkeys for protocol version 2.
-	> Ensure server is not running X11. Turn off forwarding for X11.
-			>> Open /etc/ssh/sshd_config file search for “X11Forwarding yes”  by default it is commented and default value is “yes”, uncomment the line and change value  to “no”
-	> Disable OS Display.
+	Ensure only sshv2 is used for connection purpose. SSHV1 does not provide all the security.
+    	Open /etc/ssh/sshd_config . uncomment the line “Protocol 2” and also uncomment all the hostkeys for protocol version 2.
+    Ensure server is not running X11. Turn off forwarding for X11.
+    	Open /etc/ssh/sshd_config file search for “X11Forwarding yes”  by default it is commented and default value is “yes”, uncomment the line and change value  to “no”.
+    Disable OS Display.
 
 ===== Restriction on user Access:
 
