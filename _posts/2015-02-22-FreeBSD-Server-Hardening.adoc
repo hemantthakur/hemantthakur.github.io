@@ -1,10 +1,13 @@
 = FreeBSD Server Hardening
+:hp-tags: FreeBSD Server Hardening, server hardening, steps for FreeBSD Server Hardening, Hardenin steps
+
+
 After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security.
 In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to disfigurement. Similarly, Hardened servers are more resistant to security issue than the non-hardened servers.
-
 Nowadays everything is online and there are a lot of attacks on servers, so server hardening is an absolute must.
 
-Requirements
+===Requirements:
+
 1.  Clean FreeBSD Server
 2.  SSH client .
 3.  Text editor (I prefer vi).
