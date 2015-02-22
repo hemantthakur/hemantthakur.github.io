@@ -19,8 +19,11 @@ Nowadays everything is online and there are a lot of attacks on servers, so serv
 The first rule to secure the server is, never treat the root account as a regular user.  Always log as a   normal user and su to root only when needed. To prevent Root from directly logging onto your system.
 Open “/etc/ttys”  and change every occurence of “secure” to “insecure”.
 
+
+image::https://github.com/hemantthakur/hemantthakur.github.io/tree/master/images/ttybefore.png
+
 /etc/ttys file screenshot before modification
-:image: https://github.com/hemantthakur/hemantthakur.github.io/blob/master/images/ttybefore.png
+
 			 
 
 
