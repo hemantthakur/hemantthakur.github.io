@@ -119,20 +119,25 @@ Here is my /etc/login.conf file snapshot.
 
 ===== Disable Some services:
 
-Disable sendmail as it insecure MTA.
+Open /etc/rc.conf  and add following lines:
 
-Open /etc/rc.conf  and add line sendmail_enable="NONE". 
- The default kernel level is -1, means not much secure. Use level 2 or 3, 3 is the more secure level
-Open /etc/rc.conf  and add line kern_securelevel_enable="YES" and kern_securelevel="3" .
-inetd, or the network daemon dispatcher, is insecure so we want to make sure it is disabled.
-Open /etc/rc.conf  and add line inetd_enable="NO".
-By default in FreeBSD the /tmp directory does not get empty on startup its better to clear /tmp directory at the startup so that there is nothing malicious hanging in temp files.
-Open /etc/rc.conf  and add line clear_tmp_enable="YES"
-Ensure  syslogd doesn;t bind to a network socket if remote logging is not enabled.
-Open /etc/rc.conf and add line syslogd_flags="-ss".
-ICMP Redirect messages can be used by attackers to lead you to their router or some other router. Ignore those packets and log them.
-Open /etc/rc.conf and add lines icmp_drop_redirect="YES"  and icmp_log_redirect="YES" .
-Kernel States
+	sendmail_enable="NONE" #Disable sendmail as it insecure MTA.
+    
+    kern_securelevel_enable="YES"
+    
+    kern_securelevel="3" #The default kernel level is -1, means not much secure. Use level 2 or 3, 3 is the more secure level.
+    
+    inetd_enable="NO" # inetd, or the network daemon dispatcher, is insecure so we want to make sure it is disabled.
+    
+    clear_tmp_enable="YES" #By default in FreeBSD the /tmp directory does not get empty on startup its better to clear /tmp directory at the startup so that there is nothing malicious hanging in temp files.
+    
+    syslogd_flags="-ss"  # Ensure  syslogd doesn't bind to a network socket if remote logging is not enabled.
+    icmp_drop_redirect="YES"
+    icmp_log_redirect="YES"  #ICMP Redirect messages can be used by attackers to lead you to their router or some other router. Ignore those packets and log them.
+     
+    
+    
+===== Kernel States
 Change some kernel states and to make permanent open /etc/sysctl.conf  file and add the following lines. 
 
 
