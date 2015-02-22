@@ -1,0 +1,121 @@
+= FreeBSD Server Hardening
+:hp-tags: FreeBSD Server Hardening, server hardening, steps for FreeBSD Server Hardening, Hardenin steps
+
+
+After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security.
+In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to disfigurement. Similarly, Hardened servers are more resistant to security issue than the non-hardened servers.
+Nowadays everything is online and there are a lot of attacks on servers, so server hardening is an absolute must.
+
+==== Requirements:
+
+1.  Clean FreeBSD Server.
+2.  SSH client.
+3.  Text editor (I prefer vi).
+
+==== Hardening
+
+===== Disable Local root Access
+
+The first rule to secure the server is, never treat the root account as a regular user.  Always log as a   normal user and su to root only when needed. To prevent Root from directly logging onto your system.
+Open “/etc/ttys”  and change every occurence of “secure” to “insecure”.
+
+/etc/ttys file before modification					
+				 
+
+
+
+
+
+
+
+/etc/ttys file after modification
+								
+
+
+
+Filesystem Structure:
+   when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.
+
+# mv /var/tmp/* /tmp/
+# rm -rf /var/tmp
+# ln -s /tmp /var/tmp
+
+SSH Logins
+
+By default, FreeBSD prevents root from logging  via ssh, but it gives  access to anyone  with a valid user account.
+Ensure only sshv2 is used for connection purpose. SSHV1 does not provide all the security.
+Open /etc/ssh/sshd_config . uncomment the line “Protocol 2” and also uncomment all the hostkeys for protocol version 2.
+Ensure server is not running X11. Turn off forwarding for X11.
+Open /etc/ssh/sshd_config file search for “X11Forwarding yes”  by default it is commented and default value is “yes”, uncomment the line and change value  to “no”
+Disable OS Display.
+
+Restriction on user Access:
+
+The basic rule of the server security is “Restric the read/write and execution of certain files”. Update restricitions of some files. Hit these commands:
+  	# chmod o= /etc/sysctl.conf
+# chmod o= /etc/ttys
+# chmod o= /etc/inetd.conf
+# chmod o= /etc/login.*
+# chmod o= /etc/fstab
+# chmod o= /etc/rc.conf
+# chmod o= /etc/ftpusers
+# chmod o= /etc/group
+# chmod o= /etc/host*
+# chmod o= /etc/inetd.conf
+#chmod o= /usr/bin/users
+#chmod o= /usr/bin/w
+#chmod o= /usr/bin/who
+#chmod o= /usr/bin/lastcomm
+#chmod o= /usr/bin/lastlogin
+#chmod o= /usr/bin/last
+		
+Attackers tend to clear out all log files when they are finished with the server attack. So change the log file permission so that later you can check what was done.
+# chmod o= /var/log
+# chflags sappnd /var/log
+# chflags sappnd /var/log/*
+by applying these changes, logs can no longer be rotated.
+
+Password Rules
+
+By default, FreeBSD uses md5 for password hashing and encryption. But blowfish is much better and secure for passwords.
+Open /etc/login.conf and make some chages:
+change the password format in the default class to blf.
+Use some password policy like minimum password length and mix upper and lower case.
+Policy to change the password after some days.
+Automatically logout the user if they are idle for specific time.
+Prevent global access by setting the default umask.
+
+Update the login database:
+	# cap_mkdb /etc/login.conf
+
+ Here is my /etc/login.conf file snapshot.
+
+
+* Password will be converted to blowfish after changing the password. Check /etc/master.passwd after changing the password, if hashing with password begins with $2 it means blowfish is being used
+
+
+Disable Some services:
+
+Disable sendmail as it insecure MTA.
+Open /etc/rc.conf  and add line sendmail_enable="NONE". 
+ The default kernel level is -1, means not much secure. Use level 2 or 3, 3 is the more secure level
+Open /etc/rc.conf  and add line kern_securelevel_enable="YES" and kern_securelevel="3" .
+inetd, or the network daemon dispatcher, is insecure so we want to make sure it is disabled.
+Open /etc/rc.conf  and add line inetd_enable="NO".
+By default in FreeBSD the /tmp directory does not get empty on startup its better to clear /tmp directory at the startup so that there is nothing malicious hanging in temp files.
+Open /etc/rc.conf  and add line clear_tmp_enable="YES"
+Ensure  syslogd doesn;t bind to a network socket if remote logging is not enabled.
+Open /etc/rc.conf and add line syslogd_flags="-ss".
+ICMP Redirect messages can be used by attackers to lead you to their router or some other router. Ignore those packets and log them.
+Open /etc/rc.conf and add lines icmp_drop_redirect="YES"  and icmp_log_redirect="YES" .
+Kernel States
+Change some kernel states and to make permanent open /etc/sysctl.conf  file and add the following lines. 
+
+
+
+security.bsd.see_other_uids=0   #prevent users from seeing information about processes that are being run under another UID.
+net.inet.tcp.blackhole=2
+net.inet.udp.blackhole=1 #these two lines enable the concept of blackholing. This is so RST packets don’t get sent back in response to closed ports. This helps to block port scans.
+net.inet.ip.random_id=1     # generate a random ID for the IP packets . This will prevent remote observers from determining the rate packets are being generated by watching the counter.
+
+These are the server hardening steps to secure your production server.
