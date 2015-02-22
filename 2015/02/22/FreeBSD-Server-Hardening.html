@@ -23,7 +23,7 @@
     <meta property="og:description" content="After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security. In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to..." />
     <meta property="og:url" content="http://hemantthakur.github.io/2015/02/22/FreeBSD-Server-Hardening.html" />
     <meta property="article:published_time" content="2015-02-21T18:30:00.000Z" />
-    <meta property="article:modified_time" content="2015-02-22T17:49:10.823Z" />
+    <meta property="article:modified_time" content="2015-02-22T17:50:37.296Z" />
     <meta property="article:tag" content="FreeBSD Server Hardening" />
     <meta property="article:tag" content="server hardening" />
     
@@ -47,7 +47,7 @@
     "headline": "FreeBSD Server Hardening",
     "url": "http://hemantthakur.github.io/2015/02/22/FreeBSD-Server-Hardening.html",
     "datePublished": "2015-02-21T18:30:00.000Z",
-    "dateModified": "2015-02-22T17:49:10.823Z",
+    "dateModified": "2015-02-22T17:50:37.296Z",
     "keywords": "FreeBSD Server Hardening,  server hardening",
     "description": "After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security. In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to..."
 }
@@ -189,17 +189,9 @@ Open “/etc/ttys”  and change every occurence of “secure” to “insecure�
 </div>
 <div class="literalblock">
 <div class="content">
-<pre># chmod o= /var/log</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre># chflags sappnd /var/log</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre># chflags sappnd /var/log/*</pre>
+<pre># chmod o= /var/log
+# chflags sappnd /var/log
+# chflags sappnd /var/log/*</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -214,27 +206,11 @@ Open /etc/login.conf and make some chages:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>&gt; change the password format in the default class to blf.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&gt; Use some password policy like minimum password length and mix upper and lower case.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&gt; Policy to change the password after some days.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&gt; Automatically logout the user if they are idle for specific time.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&gt; Prevent global access by setting the default umask.</pre>
+<pre>&gt; change the password format in the default class to blf.
+&gt; Use some password policy like minimum password length and mix upper and lower case.
+&gt; Policy to change the password after some days.
+&gt; Automatically logout the user if they are idle for specific time.
+&gt; Prevent global access by setting the default umask.</pre>
 </div>
 </div>
 <div class="paragraph">
