@@ -23,7 +23,7 @@
     <meta property="og:description" content="After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security. In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to..." />
     <meta property="og:url" content="http://hemantthakur.github.io/2015/02/22/FreeBSD-Server-Hardening.html" />
     <meta property="article:published_time" content="2015-02-21T18:30:00.000Z" />
-    <meta property="article:modified_time" content="2015-02-22T17:31:01.369Z" />
+    <meta property="article:modified_time" content="2015-02-22T17:32:48.503Z" />
     <meta property="article:tag" content="FreeBSD Server Hardening" />
     <meta property="article:tag" content="server hardening" />
     
@@ -47,7 +47,7 @@
     "headline": "FreeBSD Server Hardening",
     "url": "http://hemantthakur.github.io/2015/02/22/FreeBSD-Server-Hardening.html",
     "datePublished": "2015-02-21T18:30:00.000Z",
-    "dateModified": "2015-02-22T17:31:01.369Z",
+    "dateModified": "2015-02-22T17:32:48.503Z",
     "keywords": "FreeBSD Server Hardening,  server hardening",
     "description": "After Installing clean FreeBSD Server, it is important to harden the server to enhancce the server security. In general “Hardening”  means making some changes on spongy material or surface so that it becomes more  stronger than before and harder to..."
 }
@@ -125,10 +125,8 @@ Open “/etc/ttys”  and change every occurence of “secure” to “insecure�
 </div>
 <div class="sect4">
 <h5 id="_filesystem_structure">Filesystem Structure:</h5>
-<div class="literalblock">
-<div class="content">
-<pre>when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.</pre>
-</div>
+<div class="paragraph">
+<p>when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.</p>
 </div>
 <div class="literalblock">
 <div class="content">
