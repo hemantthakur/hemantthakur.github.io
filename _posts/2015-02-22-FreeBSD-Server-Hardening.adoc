@@ -1,2 +1,1 @@
-= Blog Title
-Get something going on
+= FreeBSD Server Hardening
