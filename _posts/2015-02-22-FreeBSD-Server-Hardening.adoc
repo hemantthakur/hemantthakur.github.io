@@ -37,70 +37,107 @@ image::https://github.com/hemantthakur/hemantthakur.github.io/tree/master/images
 
 
 
-Filesystem Structure:
+===== Filesystem Structure:
+
    when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.
+   
 
-# mv /var/tmp/* /tmp/
-# rm -rf /var/tmp
-# ln -s /tmp /var/tmp
+		# mv /var/tmp/* /tmp/
+		# rm -rf /var/tmp
+		# ln -s /tmp /var/tmp
+        
 
-SSH Logins
+===== SSH Logins
+
 
 By default, FreeBSD prevents root from logging  via ssh, but it gives  access to anyone  with a valid user account.
-Ensure only sshv2 is used for connection purpose. SSHV1 does not provide all the security.
-Open /etc/ssh/sshd_config . uncomment the line “Protocol 2” and also uncomment all the hostkeys for protocol version 2.
-Ensure server is not running X11. Turn off forwarding for X11.
-Open /etc/ssh/sshd_config file search for “X11Forwarding yes”  by default it is commented and default value is “yes”, uncomment the line and change value  to “no”
-Disable OS Display.
+	> Ensure only sshv2 is used for connection purpose. SSHV1 does not provide all the security.
+			>> Open /etc/ssh/sshd_config . uncomment the line “Protocol 2” and also uncomment all the hostkeys for protocol version 2.
+	> Ensure server is not running X11. Turn off forwarding for X11.
+			>> Open /etc/ssh/sshd_config file search for “X11Forwarding yes”  by default it is commented and default value is “yes”, uncomment the line and change value  to “no”
+	> Disable OS Display.
 
-Restriction on user Access:
+===== Restriction on user Access:
 
 The basic rule of the server security is “Restric the read/write and execution of certain files”. Update restricitions of some files. Hit these commands:
-  	# chmod o= /etc/sysctl.conf
-# chmod o= /etc/ttys
-# chmod o= /etc/inetd.conf
-# chmod o= /etc/login.*
-# chmod o= /etc/fstab
-# chmod o= /etc/rc.conf
-# chmod o= /etc/ftpusers
-# chmod o= /etc/group
-# chmod o= /etc/host*
-# chmod o= /etc/inetd.conf
-#chmod o= /usr/bin/users
-#chmod o= /usr/bin/w
-#chmod o= /usr/bin/who
-#chmod o= /usr/bin/lastcomm
-#chmod o= /usr/bin/lastlogin
-#chmod o= /usr/bin/last
+
+  	# chmod o= /etc/sysctl.conf	
+    
+	# chmod o= /etc/ttys
+	
+    # chmod o= /etc/inetd.conf
+	
+    # chmod o= /etc/login.*
+	
+    # chmod o= /etc/fstab
+	
+    # chmod o= /etc/rc.conf
+	
+    # chmod o= /etc/ftpusers
+    
+	# chmod o= /etc/group
+    
+	# chmod o= /etc/host*
+    
+	# chmod o= /etc/inetd.conf
+    
+	# chmod o= /usr/bin/users
+    
+	# chmod o= /usr/bin/w
+    
+	# chmod o= /usr/bin/who
+    
+	# chmod o= /usr/bin/lastcomm
+    
+	# chmod o= /usr/bin/lastlogin
+    
+	# chmod o= /usr/bin/last
+    
 		
 Attackers tend to clear out all log files when they are finished with the server attack. So change the log file permission so that later you can check what was done.
-# chmod o= /var/log
-# chflags sappnd /var/log
-# chflags sappnd /var/log/*
+
+	# chmod o= /var/log
+    
+	# chflags sappnd /var/log
+    
+	# chflags sappnd /var/log/*
+    
 by applying these changes, logs can no longer be rotated.
 
-Password Rules
+===== Password Rules
 
 By default, FreeBSD uses md5 for password hashing and encryption. But blowfish is much better and secure for passwords.
 Open /etc/login.conf and make some chages:
-change the password format in the default class to blf.
-Use some password policy like minimum password length and mix upper and lower case.
-Policy to change the password after some days.
-Automatically logout the user if they are idle for specific time.
-Prevent global access by setting the default umask.
+
+	> change the password format in the default class to blf.
+    
+	> Use some password policy like minimum password length and mix upper and lower case.
+    
+	> Policy to change the password after some days.
+    
+	> Automatically logout the user if they are idle for specific time.
+    
+	> Prevent global access by setting the default umask.
+    
 
 Update the login database:
+
 	# cap_mkdb /etc/login.conf
 
- Here is my /etc/login.conf file snapshot.
+
+
+Here is my /etc/login.conf file snapshot.
+
 
 
 * Password will be converted to blowfish after changing the password. Check /etc/master.passwd after changing the password, if hashing with password begins with $2 it means blowfish is being used
 
 
-Disable Some services:
+
+===== Disable Some services:
 
 Disable sendmail as it insecure MTA.
+
 Open /etc/rc.conf  and add line sendmail_enable="NONE". 
  The default kernel level is -1, means not much secure. Use level 2 or 3, 3 is the more secure level
 Open /etc/rc.conf  and add line kern_securelevel_enable="YES" and kern_securelevel="3" .
