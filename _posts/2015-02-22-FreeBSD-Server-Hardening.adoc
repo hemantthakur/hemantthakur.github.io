@@ -10,31 +10,17 @@ Nowadays everything is online and there are a lot of attacks on servers, so serv
 
 1.  Clean FreeBSD Server.
 2.  SSH client.
-3.  Text editor (I prefer vi).
+3.  Text editor.
 
-==== Hardening
+==== Hardening steps:
 
 ===== Disable Local root Access
 
-The first rule to secure the server is, never treat the root account as a regular user.  Always log as a   normal user and su to root only when needed. To prevent Root from directly logging onto your system.
-Open “/etc/ttys”  and change every occurence of “secure” to “insecure”.
+The first rule to secure the server is, never treat the root account as a regular user.Always log as a normal user and su to root only when needed.
 
+To prevent Root from directly logging onto your system.
 
-image::https://github.com/hemantthakur/hemantthakur.github.io/tree/master/images/ttybefore.png
-
-/etc/ttys file screenshot before modification
-
-			 
-
-
-
-
-
-
-
-/etc/ttys file after modification
-								
-
+	Open “/etc/ttys”  and change every occurence of “secure” to “insecure”.
 
 
 ===== Filesystem Structure:
