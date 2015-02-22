@@ -39,12 +39,12 @@ image::https://github.com/hemantthakur/hemantthakur.github.io/tree/master/images
 
 ===== Filesystem Structure:
 
-   when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.
+when we install the default FreeBSD server then the “tmp” directory is at two places - “/tmp” and “/var/tmp”.  Delete “/var/tmp” and Create link from “/var/tmp” to “/tmp”.
    
 
-		# mv /var/tmp/* /tmp/
-		# rm -rf /var/tmp
-		# ln -s /tmp /var/tmp
+	# mv /var/tmp/* /tmp/
+	# rm -rf /var/tmp
+    # ln -s /tmp /var/tmp
         
 
 ===== SSH Logins
