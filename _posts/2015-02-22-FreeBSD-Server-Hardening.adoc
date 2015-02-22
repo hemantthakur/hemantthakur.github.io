@@ -20,8 +20,8 @@ The first rule to secure the server is, never treat the root account as a regula
 Open “/etc/ttys”  and change every occurence of “secure” to “insecure”.
 
 /etc/ttys file screenshot before modification
-image:: https://github.com/hemantthakur/hemantthakur.github.io/blob/master/images/ttybefore.png
-				 
+:image: https://github.com/hemantthakur/hemantthakur.github.io/blob/master/images/ttybefore.png
+			 
 
 
 
