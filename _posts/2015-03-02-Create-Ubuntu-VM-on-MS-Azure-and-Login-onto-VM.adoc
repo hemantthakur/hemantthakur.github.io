@@ -54,6 +54,6 @@ image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger
     
 	Entet the password that you set while creating the virtual machine.
     
-image::http://hemantthakur.github.io/2015/03/02/images/quickcreate.png
+image::http://hemantthakur.github.io/2015/03/02/images/quickcreate.png[]
 
 You can now work with the virtual machine just as you would with any other server.
