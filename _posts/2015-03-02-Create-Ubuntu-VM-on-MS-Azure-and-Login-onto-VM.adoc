@@ -12,4 +12,4 @@ Azure is the cloud platform that provides both Infrastructure-as-a-service (IaaS
 ==== Steps:
 ===== How To create ubuntu Virtual Machine:
 
-Sign in to the Azure Management Portal. Check out the Free Trial offer if you don't have a subscription yet.
+	Sign in to the Azure Management Portal. Check out the Free Trial offer if you don't have a subscription yet.
