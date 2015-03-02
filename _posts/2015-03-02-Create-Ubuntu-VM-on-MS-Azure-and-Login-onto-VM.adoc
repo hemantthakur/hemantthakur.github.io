@@ -18,5 +18,5 @@ Azure is the cloud platform that provides both Infrastructure-as-a-service (IaaS
 
 > Click on the Virtual machines.
  
- image::http://hemantthakur.github.io/2015/03/02/images/quickcreate.png[]
+ image:: http://hemantthakur.github.io/2015/03/02/images/quickcreate.png[]
  
