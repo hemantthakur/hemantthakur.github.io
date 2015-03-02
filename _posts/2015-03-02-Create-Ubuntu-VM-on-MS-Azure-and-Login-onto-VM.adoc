@@ -38,3 +38,23 @@ is the global DNS name that becomes part of the URI that's used to contact the v
 	Give the password for the user.
     
 	Select the region best suited for you.
+    
+After clicking on the “Create Virtual Machine” , Azure creates the virtual machine and cloud service, the Management Portal lists the new virtual machine under Virtual Machines and lists the cloud service under Cloud Services. Both the virtual machine and the cloud service are started automatically.
+
+===== How to log on to the virtual machine
+
+To manage the VM  and the applications installed on the machines you need to access that machine using ssh. To do this you need to install ssh client on your machine. If you are windows user then use some ssh client I prefer "Putty".
+When virtual Machine show the "running" status click on it. It will open the Virtual Machine webpage from that you can configure and monitor your virtual machine.
+
+image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg
+
+	click on the Dashboard and scroll down the page, look for the SSH Details in the Quick Glance sectionat the right side of the dashboard.
+    
+	Open the terminal and ssh on the machine. The Default UserName is “azureuser”.
+    
+	Entet the password that you set while creating the virtual machine.
+    
+image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg
+
+
+You can now work with the virtual machine just as you would with any other server.
