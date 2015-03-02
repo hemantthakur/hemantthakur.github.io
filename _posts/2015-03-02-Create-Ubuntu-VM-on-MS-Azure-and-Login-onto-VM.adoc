@@ -12,16 +12,16 @@ Azure is the cloud platform that provides both Infrastructure-as-a-service (IaaS
 ==== Steps:
 ===== How To create ubuntu Virtual Machine:
 
-> Sign in to the Azure Management Portal. Check out the Free Trial offer if you don't have a subscription yet.
+>> Sign in to the Azure Management Portal. Check out the Free Trial offer if you don't have a subscription yet.
 
 	On the Dashboard, In the Left Panel all the services are listed like: website, Mobile services, cloud services, SQL databases etc. 
 
-> Click on the Virtual machines.
+>> Click on the Virtual machines.
 image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg
 
-> On the command bar at the bottom of the window, click New.
+>> On the command bar at the bottom of the window, click New.
 
-> Under Compute, click Virtual Machine, Then it will ask whether you want “Quick create” or “From Galary”.
+>> Under Compute, click Virtual Machine, Then it will ask whether you want “Quick create” or “From Galary”.
 
 	In Quick Create option it will create a virtual machine with default settings like End point, ssh key, username etc.And in  “From Galary option you can customize these settings”. Here I am going to explain “Quick Create” Option. 
 
