@@ -46,7 +46,7 @@ After clicking on the “Create Virtual Machine” , Azure creates the virtual m
 To manage the VM  and the applications installed on the machines you need to access that machine using ssh. To do this you need to install ssh client on your machine. If you are windows user then use some ssh client I prefer "Putty".
 When virtual Machine show the "running" status click on it. It will open the Virtual Machine webpage from that you can configure and monitor your virtual machine.
 
-image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg
+image::http://hemantthakur.github.io/2015/03/02/images/dashboard.png[]
 
 	click on the Dashboard and scroll down the page, look for the SSH Details in the Quick Glance sectionat the right side of the dashboard.
     
@@ -54,6 +54,7 @@ image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger
     
 	Entet the password that you set while creating the virtual machine.
     
-image::http://hemantthakur.github.io/2015/03/02/images/quickcreate.png[]
+image::http://hemantthakur.github.io/2015/03/02/images/login.png[]
+
 
 You can now work with the virtual machine just as you would with any other server.
