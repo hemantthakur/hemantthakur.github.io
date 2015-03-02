@@ -25,4 +25,16 @@ image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger
 
 	In Quick Create option it will create a virtual machine with default settings like End point, ssh key, username etc.And in  “From Galary option you can customize these settings”. Here I am going to explain “Quick Create” Option. 
 
-When you will click on the “Quick Create” Options, it will ask 
+When you will click on the “Quick Create” Options, it will ask for:
+
+	====== DNS Name: 
+is the global DNS name that becomes part of the URI that's used to contact the virtual machine.You'll need to come up with your own cloud service name because it must be unique in Azure.
+
+	====== User Name: 
+    Type the name of the account that you will use to administer the virtual machine. You cannot use root for the user name. In quick create option default user name is “azureuser” 
+    
+	From Choose an Image, select an image from one of the lists. (The available images may differ depending on the subscription you're using.) 
+
+	Give the password for the user.
+    
+	Select the region best suited for you.
