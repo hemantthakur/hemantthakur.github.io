@@ -23,5 +23,6 @@ image::http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger
 
 > Under Compute, click Virtual Machine, Then it will ask whether you want “Quick create” or “From Galary”.
 
-	In Quick Create option it will create a virtual machine with default settings like End point, ssh key, username etc.
-And in  “From Galary option you can customize these settings”. Here I am going to explain “Quick Create” Option. When you will click on the “Quick Create” Options, it will ask 
+	In Quick Create option it will create a virtual machine with default settings like End point, ssh key, username etc.And in  “From Galary option you can customize these settings”. Here I am going to explain “Quick Create” Option. 
+
+When you will click on the “Quick Create” Options, it will ask 
