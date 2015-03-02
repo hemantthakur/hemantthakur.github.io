@@ -17,3 +17,6 @@ Azure is the cloud platform that provides both Infrastructure-as-a-service (IaaS
 	On the Dashboard, In the Left Panel all the services are listed like: website, Mobile services, cloud services, SQL databases etc. 
 
 > Click on the Virtual machines.
+ 
+ image::https://github.com/hemantthakur/hemantthakur.github.io/tree/master/2015/03/02/images/quickcreate.png[]
+ 
