@@ -30,11 +30,11 @@ In this blog I am going to explain, how to encrypt or decrypt your emConfigure P
 
 We can encrypt and decrypt emails in Chrome using Mymail-Crypt. Mymail-Crypt make OpenPGP encryption available and used by anyone.
 
-. number Goto the chrome menu Settings ->Extensions -> Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”. + or you can simply add from this link:https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba?hl=en-US[link]
+. number Goto the chrome menu Settings ->Extensions -> Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”. +or you can simply add from this link:https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba?hl=en-US[link]
 
 
 
-image::http://hemantthakur.github.io/2015/03/08/images/1.png[]
+image::http://hemantthakur.github.io/2015/03/08/images/1.png[width="300",height="300"]
 
 . After adding successfully goto the Chrome Settings->Extensions, there you'll find Mymail-crypt is added. Now click on the options of the Mymail-crypt and Mymail-crypt Home page will open.
 
