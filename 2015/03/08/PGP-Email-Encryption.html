@@ -4,16 +4,28 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>PGP Email Encryption</title>
-    <meta name="description" content="" />
+    <title>PGP Email Encryption - Get Something Going</title>
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="shortcut icon" href="http://hemantthakur.github.io/themes/Casper/favicon.ico">
+    <meta name="description" content="">
 
-    <link rel="stylesheet" type="text/css" href="http://hemantthakur.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PGP Email Encryption">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PGP Email Encryption">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="http://hemantthakur.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
 
     <link rel="canonical" href="http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html" />
     
@@ -23,7 +35,7 @@
     <meta property="og:description" content="When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But..." />
     <meta property="og:url" content="http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html" />
     <meta property="article:published_time" content="2015-03-07T18:30:00.000Z" />
-    <meta property="article:modified_time" content="2015-03-08T12:37:50.958Z" />
+    <meta property="article:modified_time" content="2015-03-08T15:07:56.152Z" />
     <meta property="article:tag" content="Encrypt and Decrypt emails using OpenPGP" />
     
     <meta name="twitter:card" content="summary" />
@@ -46,7 +58,7 @@
     "headline": "PGP Email Encryption",
     "url": "http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html",
     "datePublished": "2015-03-07T18:30:00.000Z",
-    "dateModified": "2015-03-08T12:37:50.958Z",
+    "dateModified": "2015-03-08T15:07:56.152Z",
     "keywords": "Encrypt and Decrypt emails using OpenPGP",
     "description": "When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But..."
 }
@@ -54,32 +66,99 @@
 
     <meta name="generator" content="Ghost ?" />
     <link rel="alternate" type="application/rss+xml" title="Get Something Going" href="http://hemantthakur.github.io/rss" />
+
 </head>
-<body class="post-template tag-undefined">
+<body class="post-template tag-undefined no-js">
 
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " style="background-image: url(http://previews.123rf.com/images/apostrophe/apostrophe1208/apostrophe120800024/14674422-old-blue-background-elegant-layout-with-dark-black-and-blue-ribbon-stripe-down-border-frame-for-book.jpg)">
+      <div class="panel-main">
     
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <a href="http://hemantthakur.github.io" title="link to homepage for Get Something Going"><img src="http://www.dsdinfosec.com/images/dsd-logo.png" width="80" alt="Get Something Going logo" class="panel-cover__logo logo" /></a>
+            <h1 class="panel-cover__title panel-title"><a href="http://hemantthakur.github.io" title="link to homepage for Get Something Going">Get Something Going</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">Tell me and I forget, teach me and I may remember, involve me and I learn.</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="/#blog" title="link to Get Something Going blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+                  <!-- Twitter -->
+                  <li class="navigation__item">
+                    <a href="https://www.facebook.com/908rishu" title="Facebook account">
+                      <i class='icon icon-social-facebook'></i>
+                      <span class="label">Facebook</span>
+                    </a>
+                  </li>
+              
+                  <!-- Twitter -->
+                  <li class="navigation__item">
+                    <a href="https://twitter.com/hemant908thakur" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+              
+              
+              
+              
+              
+              
+                  <!-- Email -->
+                  <li class="navigation__item">
+                    <a href="mailto:er.hemant908thakur@gmail.com" title="Email er.hemant908thakur@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
 
+  <article class="post-container post-container--single">
 
-<header class="main-header post-head no-cover">
-    <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="http://hemantthakur.github.io">Home</a>
-        <a class="subscribe-button icon-feed" href="http://hemantthakur.github.io/rss/">Subscribe</a>
-    </nav>
-</header>
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="08 Mar 2015" class="post-meta__date date">08 Mar 2015</time> &#8226; <span class="post-meta__tags tags">on <a href="http://hemantthakur.github.io/tag/Encrypt and Decrypt emails using OpenPGP">Encrypt and Decrypt emails using OpenPGP</a></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/6284495?v=3" alt="profile image for " class="avatar post-meta__avatar" /> by </span>
+      </div>
+      <h1 class="post-title">PGP Email Encryption</h1>
+    </header>
 
-<main class="content" role="main">
-
-    <article class="post tag-undefined">
-
-        <header class="post-header">
-            <h1 class="post-title">PGP Email Encryption</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="2015-03-08">08 March 2015</time>  on <a href="http://hemantthakur.github.io/tag/Encrypt and Decrypt emails using OpenPGP">Encrypt and Decrypt emails using OpenPGP</a>
-            </section>
-        </header>
-
-        <section class="post-content">
-            <div id="preamble">
+    <section class="post tag-undefined">
+      <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But at the server end the mails are stored in the plain text, so anyone who has the access to these server  or 3rd party like NSA can monitor the mails continously and can read your mail. That&#8217;s why it is important to encrypt your mails to ensure that the mail will be unfolded by the addressee itself or to protect from prying eyes, no matter whatever server you are using.</p>
@@ -267,60 +346,35 @@ you can&#8217;t encrypt the mails untill you added the public key of recipient.
 <p>In this way you can do secure email communication over the internet.</p>
 </div>
 </div>
-        </section>
+    </section>
 
-        <footer class="post-footer">
-
-
-            <figure class="author-image">
-                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/6284495?v=3)"><span class="hidden">'s Picture</span></a>
-            </figure>
-
-            <section class="author">
-                <h4><a href=""></a></h4>
-
-                    <p>Read <a href="">more posts</a> by this author.</p>
-                <div class="author-meta">
-                    <span class="author-location icon-location">Chandigarh</span>
-                    <span class="author-link icon-link"><a href="http://www.dsdinfosec.com">DSDInfosec</a></span>
-                </div>
-            </section>
-
-
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/share?text=PGP%20Email%20Encryption&amp;url=http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
-
-        </footer>
-
-
-    </article>
-
-</main>
+  </article>
 
 
 
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="http://hemantthakur.github.io">Get Something Going</a> &copy; 2015</section>
-        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
-    </footer>
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2015. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script>
 
-    <script type="text/javascript" src="http://hemantthakur.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
-    <script type="text/javascript" src="http://hemantthakur.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+    <script type="text/javascript" src="http://hemantthakur.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60499968-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
 
 </body>
 </html>
