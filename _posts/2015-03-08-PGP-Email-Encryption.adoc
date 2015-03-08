@@ -47,7 +47,7 @@ image::http://hemantthakur.github.io/2015/03/08/images/2.png[]
 
 image::http://hemantthakur.github.io/2015/03/08/images/3.png[]
 
-* Share your public key with your friend whom you want to send the encrypted mail, and add his public key in your mymail-crypt. 
+* Share your public key among your friends whom you want to send the encrypted mail, and add his public key in your mymail-crypt. 
 	
     click on the “Friend's Key” menu.
 
