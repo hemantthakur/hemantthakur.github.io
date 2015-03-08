@@ -10,9 +10,8 @@ PGP( Pretty Good Privacy ) is a popular method/program used to encrypt and decry
 
 PGP is useful for two things:
 
-1.  Privacy and Security.
-
-2. Authenticity.
+. Privacy and Security.
+. Authenticity.
 
 By privacy, I mean that you can prevent people from seeing your emails. For example, you can encrypt an email to someone, or encrypt a file with a list of passwords.
 
@@ -23,15 +22,15 @@ These two can be combined.
 In this blog I am going to explain, how to encrypt or decrypt your emConfigure PGP in Chrome:ail on *Chrome*.
 
 ===== Requirements:
-	
-    1> Chrome Browser.    
-	2> Internet Connection.
+
+. Chrome Browser.
+. nternet Connection.
 
 ===== Configure PGP in Chrome:
 
 We can encrypt and decrypt emails in Chrome using Mymail-Crypt. Mymail-Crypt make OpenPGP encryption available and used by anyone.
 
-. number Goto the chrome menu Settings ->Extensions -> Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”.{zwsp}or you can simply add from this link:https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba?hl=en-US[link]
+. number Goto the chrome menu Settings ->Extensions -> Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”. + or you can simply add from this link:https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba?hl=en-US[link]
 
 
 
