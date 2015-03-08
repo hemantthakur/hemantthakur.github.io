@@ -30,16 +30,56 @@ In this blog I am going to explain, how to encrypt or decrypt your emConfigure P
 
 We can encrypt and decrypt emails in Chrome using Mymail-Crypt. Mymail-Crypt make OpenPGP encryption available and used by anyone.
 
--- Goto the chrome menu Settings ->Extensions -> Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”. 
+* Goto the chrome menu Settings ->Extensions -> Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”. 
 	
 or you can simply add from this
 link:https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba?hl=en-US[link]
 
 image::http://hemantthakur.github.io/2015/03/08/images/1.png[width="300",height="300"]
---After adding successfully goto the Chrome Settings->Extensions, there you'll find Mymail-crypt is added. Now click on the options of the Mymail-crypt and Mymail-crypt Home page will open.
+
+* After adding successfully goto the Chrome Settings->Extensions, there you'll find Mymail-crypt is added. Now click on the options of the Mymail-crypt and Mymail-crypt Home page will open.
 
 image::http://hemantthakur.github.io/2015/03/08/images/2.png[]
 
-. Now add your Private key. Click on the Mykeys menu, if you already have your private key then click onthe “Insert Private key” if you don't have then click on the “generate a new key”. I don't have my private key so I clicked on the “generate a new key”.  And fillup all your  details > Name , Email Address and the Key bit length(I prefer 2048). and click on the Submit button. After few second, your private and public key is generated.
+
+* Now add your Private key. Click on the Mykeys menu, if you already have your private key then click onthe “Insert Private key” if you don't have then click on the “generate a new key”. I don't have my private key so I clicked on the “generate a new key”.  And fillup all your  details > Name , Email Address and the *Key bit length(I prefer 2048)* . and click on the Submit button. After few second, your private and public key will be generated.
+
 
 image::http://hemantthakur.github.io/2015/03/08/images/3.png[]
+
+* Share your public key with your friend whom you want to send the encrypted mail, and add his public key in your mymail-crypt. 
+	
+    click on the “Friend's Key” menu.
+
+There you will find your public key. Click on *“show key”* and you can see your public key, copy it and share it among your friends.
+
+Click on *“Insert Public key”* to add your friend's public key, paste key and click on the submit button. Your Friend's key will be added.
+
+
+image::http://hemantthakur.github.io/2015/03/08/images/5.png[]
+
+IMPORTANT: you can't encrypt the mails untill you added the public key of recipient.
+
+Now whenever you'll compose a new mail, you'll get option to encrypt your mail.
+
+image::http://hemantthakur.github.io/2015/03/08/images/6.png[]
+
+*  Enter Recipient Address and write the mail whatever u want, after you write the mail click on the *Encrypt* button, your mail will be encrypted. And send the mail.
+
+[NOTE]
+===============================
+The mail will be encrypted with the public key of the recipient. And Receiver can decrypt it only with his private key.
+===============================
+
+image::http://hemantthakur.github.io/2015/03/08/images/7.png[]
+
+* *Now at the recipient end*, the Receiver can only decrypt this mail using with his private key.
+
+image::http://hemantthakur.github.io/2015/03/08/images/8.png[]
+
+To decrypt the mail Receiver will enter his password that he  chose when he generated his private key.
+
+image::http://hemantthakur.github.io/2015/03/08/images/9.png[]
+
+
+In this way you can do secure email communication over the internet.
