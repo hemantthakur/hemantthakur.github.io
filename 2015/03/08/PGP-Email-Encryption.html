@@ -23,7 +23,7 @@
     <meta property="og:description" content="When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But..." />
     <meta property="og:url" content="http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html" />
     <meta property="article:published_time" content="2015-03-07T18:30:00.000Z" />
-    <meta property="article:modified_time" content="2015-03-08T09:02:28.656Z" />
+    <meta property="article:modified_time" content="2015-03-08T09:23:53.014Z" />
     <meta property="article:tag" content="Encrypt and Decrypt emails using OpenPGP" />
     
     <meta name="twitter:card" content="summary" />
@@ -46,7 +46,7 @@
     "headline": "PGP Email Encryption",
     "url": "http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html",
     "datePublished": "2015-03-07T18:30:00.000Z",
-    "dateModified": "2015-03-08T09:02:28.656Z",
+    "dateModified": "2015-03-08T09:23:53.014Z",
     "keywords": "Encrypt and Decrypt emails using OpenPGP",
     "description": "When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But..."
 }
@@ -79,17 +79,65 @@
         </header>
 
         <section class="post-content">
-            <div class="paragraph">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
 <p>When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But at the server end the mails are stored in the plain text, so anyone who has the access to these server  or 3rd party like NSA can monitor the mails continously and can read your mail. That&#8217;s why it is important to encrypt your mails to ensure that the mail will be unfolded by the addressee itself or to protect from prying eyes, no matter whatever server you are using.</p>
 </div>
 <div class="paragraph">
 <p>Email encryption is important when we talk about the Government organizations and Companies sharing their confidential data.</p>
 </div>
 <div class="paragraph">
-<p>
-PGP( Pretty Good Privacy )
-
-is a popular method/program used to encrypt and decrypt email over the Internet, as well as authenticate the message with digital signatures and store the encrypted files.</p>
+<p>PGP( Pretty Good Privacy ) is a popular method/program used to encrypt and decrypt email over the Internet, as well as authenticate the message with digital signatures and store the encrypted files.</p>
+</div>
+<div class="paragraph">
+<p>PGP is useful for two things:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Privacy and Security.</p>
+</li>
+<li>
+<p>Authenticity.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>By privacy, I mean that you can prevent people from seeing your emails. For example, you can encrypt an email to someone, or encrypt a file with a list of passwords.</p>
+</div>
+<div class="paragraph">
+<p>By Authenticity, I mean that you can ensure email was sent/written by the person
+you think it was, and that it wasn&#8217;t modified by a third party.
+These two can be combined.</p>
+</div>
+<div class="paragraph">
+<p>In this blog I am going to explain, how to encrypt or decrypt your emConfigure PGP in Chrome:ail on <strong>Chrome</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_requirements">Requirements:</h5>
+<div class="literalblock">
+<div class="content">
+<pre>1&gt; Chrome Browser.
+2&gt; Internet Connection.</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_configure_pgp_in_chrome">Configure PGP in Chrome:</h5>
+<div class="paragraph">
+<p>We can encrypt and decrypt emails in Chrome using Mymail-Crypt. Mymail-Crypt make OpenPGP encryption available and used by anyone.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>1&gt; Goto the chrome menu Settings -&gt;Extensions -&gt; Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or you can simply add from this <a href="https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba?hl=en-US">link</a></p>
+</div>
 </div>
         </section>
 
