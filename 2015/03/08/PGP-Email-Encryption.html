@@ -23,7 +23,7 @@
     <meta property="og:description" content="When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But..." />
     <meta property="og:url" content="http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html" />
     <meta property="article:published_time" content="2015-03-07T18:30:00.000Z" />
-    <meta property="article:modified_time" content="2015-03-08T09:58:32.320Z" />
+    <meta property="article:modified_time" content="2015-03-08T10:24:11.055Z" />
     <meta property="article:tag" content="Encrypt and Decrypt emails using OpenPGP" />
     
     <meta name="twitter:card" content="summary" />
@@ -46,7 +46,7 @@
     "headline": "PGP Email Encryption",
     "url": "http://hemantthakur.github.io/2015/03/08/PGP-Email-Encryption.html",
     "datePublished": "2015-03-07T18:30:00.000Z",
-    "dateModified": "2015-03-08T09:58:32.320Z",
+    "dateModified": "2015-03-08T10:24:11.055Z",
     "keywords": "Encrypt and Decrypt emails using OpenPGP",
     "description": "When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But..."
 }
@@ -134,8 +134,12 @@ These two can be combined.</p>
 <div class="paragraph">
 <p>We can encrypt and decrypt emails in Chrome using Mymail-Crypt. Mymail-Crypt make OpenPGP encryption available and used by anyone.</p>
 </div>
-<div class="paragraph">
-<p>&#8201;&#8212;&#8201;Goto the chrome menu Settings &#8594;Extensions &#8594; Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Goto the chrome menu Settings &#8594;Extensions &#8594; Get More Extensions or goto the chrome Webstore, Search for Mymail-Crypt, which popup Mymail-crypt window, Click on the “Add to Chrome”.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>or you can simply add from this
@@ -146,25 +150,121 @@ These two can be combined.</p>
 <img src="http://hemantthakur.github.io/2015/03/08/images/1.png" alt="1.png" width="300" height="300">
 </div>
 </div>
-<div class="paragraph">
-<p>--After adding successfully goto the Chrome Settings&#8594;Extensions, there you&#8217;ll find Mymail-crypt is added. Now click on the options of the Mymail-crypt and Mymail-crypt Home page will open.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>After adding successfully goto the Chrome Settings&#8594;Extensions, there you&#8217;ll find Mymail-crypt is added. Now click on the options of the Mymail-crypt and Mymail-crypt Home page will open.</p>
+</li>
+</ul>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="http://hemantthakur.github.io/2015/03/08/images/2.png" alt="2.png">
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Now add your Private key. Click on the Mykeys menu, if you already have your private key then click onthe “Insert Private key” if you don&#8217;t have then click on the “generate a new key”. I don&#8217;t have my private key so I clicked on the “generate a new key”.  And fillup all your  details &gt; Name , Email Address and the Key bit length(I prefer 2048). and click on the Submit button. After few second, your private and public key is generated.</p>
+<p>Now add your Private key. Click on the Mykeys menu, if you already have your private key then click onthe “Insert Private key” if you don&#8217;t have then click on the “generate a new key”. I don&#8217;t have my private key so I clicked on the “generate a new key”.  And fillup all your  details &gt; Name , Email Address and the <strong>Key bit length(I prefer 2048)</strong> . and click on the Submit button. After few second, your private and public key will be generated.</p>
 </li>
-</ol>
+</ul>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="http://hemantthakur.github.io/2015/03/08/images/3.png" alt="3.png">
 </div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Share your public key with your friend whom you want to send the encrypted mail, and add his public key in your mymail-crypt.</p>
+<div class="literalblock">
+<div class="content">
+<pre>click on the “Friend's Key” menu.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There you will find your public key. Click on <strong>“show key”</strong> and you can see your public key, copy it and share it among your friends.</p>
+</div>
+<div class="paragraph">
+<p>Click on <strong>“Insert Public key”</strong> to add your friend&#8217;s public key, paste key and click on the submit button. Your Friend&#8217;s key will be added.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="http://hemantthakur.github.io/2015/03/08/images/5.png" alt="5.png">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+you can&#8217;t encrypt the mails untill you added the public key of recipient.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now whenever you&#8217;ll compose a new mail, you&#8217;ll get option to encrypt your mail.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="http://hemantthakur.github.io/2015/03/08/images/6.png" alt="6.png">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter Recipient Address and write the mail whatever u want, after you write the mail click on the <strong>Encrypt</strong> button, your mail will be encrypted. And send the mail.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The mail will be encrypted with the public key of the recipient. And Receiver can decrypt it only with his private key.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="http://hemantthakur.github.io/2015/03/08/images/7.png" alt="7.png">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Now at the recipient end</strong>, the Receiver can only decrypt this mail using with his private key.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="http://hemantthakur.github.io/2015/03/08/images/8.png" alt="8.png">
+</div>
+</div>
+<div class="paragraph">
+<p>To decrypt the mail Receiver will enter his password that he  chose when he generated his private key.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="http://hemantthakur.github.io/2015/03/08/images/9.png" alt="9.png">
+</div>
+</div>
+<div class="paragraph">
+<p>In this way you can do secure email communication over the internet.</p>
 </div>
 </div>
         </section>
