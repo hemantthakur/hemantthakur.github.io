@@ -1,0 +1,11 @@
+= PGP Email Encryption
+:hp-tags: Encrypt and Decrypt emails using OpenPGP
+
+When we send an e-mail from our gmail or any other mail server, in most cases it will be sent over https that means the communication between mail server and mail client or web browser is encrypted via SSL. But at the server end the mails are stored in the plain text, so anyone who has the access to these server  or 3rd party like NSA can monitor the mails continously and can read your mail. That's why it is important to encrypt your mails to ensure that the mail will be unfolded by the addressee itself or to protect from prying eyes, no matter whatever server you are using.  
+
+Email encryption is important when we talk about the Government organizations and Companies sharing their confidential data.
+
++++
+PGP( Pretty Good Privacy ) 
++++
+is a popular method/program used to encrypt and decrypt email over the Internet, as well as authenticate the message with digital signatures and store the encrypted files.
