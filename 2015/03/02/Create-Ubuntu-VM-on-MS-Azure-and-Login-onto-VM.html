@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <title>Create Ubuntu VM on MS Azure and Login onto VM</title>
-    <meta name="description" content="" />
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="http://hemantthakur.github.io/themes/Roon/favicon.ico">
-
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400">
-    <link rel="stylesheet" type="text/css" href="http://hemantthakur.github.io/themes/Roon/assets/css/screen.css?v=1.0.0" />
-
+    <title>Create Ubuntu VM on MS Azure and Login onto VM</title>
+    <meta name="description" content="" />
+    <link href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="http://hemantthakur.github.io/themes/Saga/assets/css/style.css?v=1.0.0" rel="stylesheet" type="text/css">
+    <link href="http://hemantthakur.github.io/themes/Saga/assets/css/animate.min.css?v=1.0.0" rel="stylesheet" type="text/css">
+    <link href="http://hemantthakur.github.io/themes/Saga/favicon.ico" rel="shortcut icon">
     <link rel="canonical" href="http://hemantthakur.github.io/2015/03/02/Create-Ubuntu-VM-on-MS-Azure-and-Login-onto-VM.html" />
     
     <meta property="og:site_name" content="Get Something Going" />
@@ -23,7 +22,7 @@
     <meta property="og:description" content="Azure is the cloud platform that provides both Infrastructure-as-a-service (IaaS) and Platform-as-a-service (PaaS) supported by Microsoft. This powerful combination of services lets us to build, deploy and manage the applications. Here I am going to write how to create Linux(..." />
     <meta property="og:url" content="http://hemantthakur.github.io/2015/03/02/Create-Ubuntu-VM-on-MS-Azure-and-Login-onto-VM.html" />
     <meta property="article:published_time" content="2015-03-01T18:30:00.000Z" />
-    <meta property="article:modified_time" content="2015-03-08T15:00:26.988Z" />
+    <meta property="article:modified_time" content="2015-03-08T15:03:05.022Z" />
     <meta property="article:tag" content="How to create Ubuntu Virtual Machine and ssh on created VM." />
     
     <meta name="twitter:card" content="summary" />
@@ -46,7 +45,7 @@
     "headline": "Create Ubuntu VM on MS Azure and Login onto VM",
     "url": "http://hemantthakur.github.io/2015/03/02/Create-Ubuntu-VM-on-MS-Azure-and-Login-onto-VM.html",
     "datePublished": "2015-03-01T18:30:00.000Z",
-    "dateModified": "2015-03-08T15:00:26.988Z",
+    "dateModified": "2015-03-08T15:03:05.022Z",
     "keywords": "How to create Ubuntu Virtual Machine and ssh on created VM.",
     "description": "Azure is the cloud platform that provides both Infrastructure-as-a-service (IaaS) and Platform-as-a-service (PaaS) supported by Microsoft. This powerful combination of services lets us to build, deploy and manage the applications. Here I am going to write how to create Linux(..."
 }
@@ -55,19 +54,30 @@
     <meta name="generator" content="Ghost ?" />
     <link rel="alternate" type="application/rss+xml" title="Get Something Going" href="http://hemantthakur.github.io/rss" />
 </head>
-<body class="post-template tag-undefined  ">
-
-    
-
-
-    <article role="main" class="">
-        <header>
-            <a href="http://hemantthakur.github.io" id="home_link">«</a>
-            <div class="meta"><time datetime="2015-03-02"><a href="undefined">March 02, 2015</a></time> <span class="count" id="js-reading-time"></span></div>
-            <h1>Create Ubuntu VM on MS Azure and Login onto VM</h1>
-        </header>
-
-        <div class="text" id="js-post-content">
+<body class="post-template tag-undefined">
+    <header id="header" class="animated fadeIn">
+    <div class="header-background">
+    <section class="blog-content">
+        <a id="site-url" class="blog-title" href="http://hemantthakur.github.io">Get Something Going</a>
+        <span class="blog-description">Tell me and I forget, teach me and I may remember, involve me and I learn.</span>
+        <nav class="links fadeIn animated">
+            <ul>
+                <!-- <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li> -->
+        
+            </ul>
+        </nav>
+    </section>
+    <section class="header-content">
+        <h1 class="post-title animated fadeInUp">Create Ubuntu VM on MS Azure and Login onto VM</h1>
+        <span class="post-data"><span class="date animated fadeInUp"><i class="fa fa-clock-o"></i> <time class="timesince date" data-timesince="1425234600" datetime="2015-03-02T00:00" title="02 March 2015">7 days ago</time></span>
+            <span class="tags animated fadeInUp"><i class="fa fa-tags"></i> <a href="http://hemantthakur.github.io/tag/How to create Ubuntu Virtual Machine and ssh on created VM.">How to create Ubuntu Virtual Machine and ssh on created VM.</a></span>
+            <span class="author animated fadeInUp"><i class="fa fa-user"></i> <a href=""></a></span></span>
+    </section>
+    </div>
+</header>
+<main id="main" class="content">
+    <article itemtype="http://schema.org/BlogPosting" class="animated fadeIn content post post tag-undefined">
+        <section class="post-content">
             <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -192,119 +202,25 @@ When virtual Machine show the "running" status click on it. It will open the Vir
 </div>
 </div>
 </div>
-        </div>
-
-        <menu>
-            <a href="" id="btn_share" class="btn" title="Share">
-                <span aria-hidden="true" data-icon="S"></span>
-                <strong>Share</strong>
-            </a>
-            <a href="http://twitter.com/share?text=Create%20Ubuntu%20VM%20on%20MS%20Azure%20and%20Login%20onto%20VM&url=http://hemantthakur.github.ioundefined" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" id="btn_comment" class="btn" target="_blank">
-                <span aria-hidden="true" data-icon="C"></span> Comment on Twitter
-            </a>
-        </menu>
-
-
-        <footer class="post-footer" role="contentinfo">
-
-            <div class="vcard">
-                <a href="http://hemantthakur.github.io/rss" id="btn_feed" class="btn" title="Feed" target="_blank">
-                    <span aria-hidden="true" data-icon=")"></span>
-                    <strong>Feed</strong>
-                </a>
-
-                <a href="" class="photo">
-                    <span style="background-image: url('https://avatars.githubusercontent.com/u/6284495?v=3');">
-                        <img src="https://avatars.githubusercontent.com/u/6284495?v=3" alt="">
-                    </span>
-                </a>
-
-                <div class="details">
-                    <h4><a href="" class="url n"></a></h4>
-                    Chandigarh<br>
-                    <a href="http://iamhemant.in" class="js-remove-domain-schema">http://iamhemant.in</a>
-                </div>
-            </div>
-
-            <div id="user_bio">
-                <div class="inner">
-                    
-                </div>
-            </div>
-
-        </footer>
-
-
-
+        </section>
 
     </article>
 
-    <div id="share_modal">
-        <div class="wrap">
-            <div class="inner">
-                <header>
-                    Share
-                    <a href="" class="close" title="Close">&times;</a>
-                </header>
-
-                <div class="roon-share-links">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                    <div id="fb-elems">
-                        <div id="fb-root"></div>
-                        <script>(function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=463438580397968";
-                        fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
-                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false" data-font="arial"></div>
-                    </div>
-
-                    <div id="pinit-btn">
-                        <a href="//pinterest.com/pin/create/button/?url=http://hemantthakur.github.ioundefined&amp;description=Create%20Ubuntu%20VM%20on%20MS%20Azure%20and%20Login%20onto%20VM-Get%20Something%20Going " data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png"></a>
-                        <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-        <a href="http://hemantthakur.github.io" id="blog_badge">
-            <span style="background-image: url('http://www.dsdinfosec.com/images/dsd-logo.png');">Get Something Going</span>
-        </a>
-
-
-    <script>
-
-
-        function no_schema_links () {
-            var links = document.querySelectorAll('.js-remove-domain-schema');
-            if (links) {
-                for (i = 0; i < links.length; ++i) {
-                    var link = links[i],
-                        text = link.innerHTML,
-                        no_schema = text.replace(/.*?:\/\//g, "");
-                    link.innerHTML = no_schema;
-                }
-            }
-        }
-
-        window.onload = function () {
-            no_schema_links();
-
-        }
-    </script>
-
+</main>
+    <footer class="animated fadeIn" id="footer">
+        <section class="colophon">
+          <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Get Something Going</span>. <span rel="license">All Rights Reserved</span>.</section>
+          <section class="poweredby">Published with <a class="icon-ghost" href="http://hubpress.io">HubPress</a></section>
+        </section>
+        <section class="bottom">
+          <section class="attribution">
+            <a href="http://github.com/Reedyn/Saga">Built with <i class="fa fa-heart"></i> and Free and Open-Source Software</a>.
+          </section>
+        </section>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script>
-
-
-
+    <script src="http://hemantthakur.github.io/themes/Saga/assets/js/scripts.js?v=1.0.0"></script>
+    
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -315,6 +231,5 @@ When virtual Machine show the "running" status click on it. It will open the Vir
     ga('send', 'pageview');
 
     </script>
-
 </body>
 </html>
