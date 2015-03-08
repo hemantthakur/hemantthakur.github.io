@@ -68,7 +68,7 @@ image::http://hemantthakur.github.io/2015/03/08/images/6.png[]
 
 [NOTE]
 ===============================
-The mail will be encrypted with the public key of the recipient. And Receiver can decrypt it only with his private key.
+[red]#The mail will be encrypted with the public key of the recipient. And Receiver can decrypt it only with his private key.#
 ===============================
 
 image::http://hemantthakur.github.io/2015/03/08/images/7.png[]
