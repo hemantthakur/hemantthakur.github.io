@@ -24,7 +24,7 @@ In this blog I am going to explain, how to encrypt or decrypt your emConfigure P
 ===== Requirements:
 
 . Chrome Browser.
-. nternet Connection.
+. Internet Connection.
 
 ===== Configure PGP in Chrome:
 
